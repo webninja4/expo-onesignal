@@ -7,10 +7,20 @@ export default function App() {
     // ✅ Initialize OneSignal with your App ID
     OneSignal.setAppId("11e5a570-a0d5-4d7f-a115-cfcd42153864");
 
+    // ✅ Add a listener for subscription changes
+    OneSignal.User.pushSubscription.addEventListener('change', (subscription) => {
+      console.log("🔔 Push subscription changed:");
+      if (subscription.current.id) {
+        console.log("  - Player ID:", subscription.current.id);
+        Alert.alert("OneSignal Registration", `Player ID: ${subscription.current.id}`);
+      }
+      console.log("  - Token:", subscription.current.token);
+      console.log("  - Opted In:", subscription.current.optedIn);
+    });
+
     // ✅ iOS: prompt user for push permissions
     OneSignal.promptForPushNotificationsWithUserResponse((response) => {
       console.log("🔔 Push permission response:", response);
-      Alert.alert("Push Permission", response ? "Allowed ✅" : "Denied ❌");
     });
 
     // ✅ Handle notifications received while app is in foreground
