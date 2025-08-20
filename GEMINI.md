@@ -4,12 +4,12 @@
 
 **Phase 1: App Configuration & Setup**
 - [x] **Version Control:** Initialize Git repository, create initial commit, and push to GitHub.
-- [ ] **Dependency Verification:** Check `package.json` to ensure `react-native-onesignal` is installed and at a compatible version.
+- [x] **Dependency Verification:** Check `package.json` to ensure `react-native-onesignal` is installed and at a compatible version.
 - [ ] **OneSignal SDK Initialization (`App.js`):** Review and correct the OneSignal initialization logic, implement the push notification permission prompt, and add logging to confirm device registration.
-- [ ] **Expo Configuration (`app.json`):** Verify and correct the `onesignal-expo-plugin` configuration, iOS bundle identifier, App Group, and `aps-environment` entitlement.
+- [x] **Expo Configuration (`app.json`):** Verify and correct the `onesignal-expo-plugin` configuration, iOS bundle identifier, App Group, and `aps-environment` entitlement.
 
 **Phase 2: Build & Initial Validation**
-- [ ] **EAS Build Configuration (`eas.json`):** Define a development build profile that correctly configures the app for use with OneSignal.
+- [x] **EAS Build Configuration (`eas.json`):** Define a development build profile that correctly configures the app for use with OneSignal.
 - [ ] **Development Client Build:** Execute an EAS build for iOS and Android to create a development client.
 - [ ] **Dashboard Notification Test:** Install the client on a physical device, confirm the device registers with OneSignal, and send a test notification from the OneSignal dashboard to validate the connection.
 
